@@ -4,49 +4,40 @@ session_start();
 
 if(isset($_POST['submit'])){
 
-		$uname = $_POST['uname'];
+		$uname = $_POST['id'];
 		$password = $_POST['password'];
 
-		if (empty($uname) || empty($password)) {
+		if (empty($id) || empty($password)) {
 			# code...
 			echo "null submission found";
 		}
 		 else 
-		  	
-		  { 
+		 {
+		 	$connection = mysqli_connect('127.0.0.1','root','','registration');
+		 	$result = mysqli_query($connection,"SELECT COUNT(uname) FROM infos WHERE id='".$id."' AND password= '".$password."' ");
+		 	$data = mysqli_fetch_assoc($result);
 
-		 	$file = fopen('user.txt','r');
-		 	$data = fread($file, filesize('user.txt'));
-		 	fclose($data);
-
-		 	$user = explode('|', $data);
-			}
-
-
-
-		 #	$user = explode('|', $data);
-
-		 	if ($uname == trim($user[0]) && $password == trim($user[1])) {
+		 	if ($data['COUNT(id)'] == 1) {
 		 		# code...
-		 		$_SESSION['status'] = "OK";
-		 		header('location:home.php');
+		 		header('location: home.php');
+
+		 		
+
+		 		
 		 	}
-		 	else{
-		 		header('location:login.php?msg=invalid_username/password');
 
-
-		 #	print_r("invalid_username");
-		 	
-
-		 		#header('location:login.php');
-
-		 		#print_r("invalid_username");
+		 	else
+		 	{
+		 		echo "invalid user name or password";
 		 	}
+
+		 	//header('location: home.php');
 		 }
- 	
+		  	
+		 
 
 
-
+}
 else
 {
 	header('location: login.php');

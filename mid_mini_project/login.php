@@ -12,8 +12,8 @@
 
 			<table>
 				<tr>
-					<td>Username</td>
-					<td><input type="text" name="uname"></td>
+					<td>ID</td>
+					<td><input type="text" name="id"></td>
 				</tr>
 				<tr>
 					<td>password</td>
@@ -22,7 +22,7 @@
 
 				<tr>
 					<td></td>
-					<td><input type="submit" name="submit" value="submit"></td>
+					<td><input type="submit" name="submit" value="Login"></td>
 
 				</tr>
 
