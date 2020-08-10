@@ -12,8 +12,8 @@
 
 			<table>
 				<tr>
-					<td>ID</td>
-					<td><input type="text" name="id"></td>
+					<td>Name</td>
+					<td><input type="text" name="uname"></td>
 				</tr>
 				<tr>
 					<td>password</td>
