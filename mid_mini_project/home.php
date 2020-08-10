@@ -20,12 +20,20 @@
 		<h2>Welcome bob!</h2>
 
 		<a href="profile.html">profile</a>
-		<a href="changepassword.html">changepass</a>
+		<a href="changepass.html">changepass</a>
 		<a href="users.html">View users</a>
 		<a href="logout.php">logout</a>
 
 			
 </body>
+
+<body>
+	<h3>Welcome anne!</h3>
+	<a href="profile.html">profile </a><br>
+	<a href="changepass.html"> change password</a><br>
+	<a href="logout.php">Logout</a><br>
+</body>
+
 </html>
 
 <?php
